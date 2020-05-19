@@ -31,15 +31,19 @@ public class Main {
 
     public static int calculateTime(int first, int second) {
         int savings = 0;
-        int firstAmt = first;
-        int secondAmt = second;
+        int previousSavings = 0;
+        savings += first;
+        previousSavings = savings;
+        savings += second;
+
         int count = 0;
         while(savings < PRIZEBALANCE) { // Calculate until we are rich
-            savings += (firstAmt + secondAmt);
-            firstAmt = secondAmt;
-            secondAmt = savings;
+            int temp = savings;
+            savings += previousSavings;
+            previousSavings = temp;
 
             count++;
+            System.out.println(savings);
         }
         if(savings == PRIZEBALANCE) {
             return count;
@@ -63,14 +67,17 @@ public class Main {
                 percent++;
             }
             for(int j = 1; j <= (PRIZEBALANCE - i); j++) {
-                firstAmt = i;
-                secondAmt = j;
-                int count = 0;
                 savings = 0;
+                int previousSavings = 0;
+                savings += i;
+                previousSavings = savings;
+                savings += j;
+
+                int count = 0;
                 while(savings < PRIZEBALANCE) { // Calculate until we are rich
-                    savings += (firstAmt + secondAmt);
-                    firstAmt = secondAmt;
-                    secondAmt = savings;
+                    int temp = savings;
+                    savings += previousSavings;
+                    previousSavings = temp;
 
                     count++;
                 }
