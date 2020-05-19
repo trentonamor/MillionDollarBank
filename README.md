@@ -11,7 +11,7 @@ You can keep the money if your balance eventually equals one million pounds exac
 [Matt's Video](https://youtu.be/ILrqPpLpwpE)
 
 ## My solution
-I brute force my way through every plausible combination of first and second deposits. First deposit goes from $0 to $999,999 and the second deposit can be anywhere from $1 to $1,000,000. 
+I brute force my way through every plausible combination of first and second deposits. First deposit goes from $0 to $999,999 and the second deposit can be anywhere from $1 to $1,000,000. However, the second deposit will always be $1,000,000 - first_deposit because it wouldn't make sense for the user to deposit over a million dollars. 
 I did not allow (1,000,000, 0) because it is the same as (0, 1,000,000). **Note** this is not the same thing for all values, just these two and any others that directly add to $1,000,000.
 
 ## To run
