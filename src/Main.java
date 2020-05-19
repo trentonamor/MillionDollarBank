@@ -56,7 +56,7 @@ public class Main {
         // Initialize Variables
         int firstAmt = 0;
         int secondAmt = 0;
-        ArrayList<Winners> winners = new ArrayList<>();
+        ArrayList<Winner> winners = new ArrayList<>();
         int longestTime = 0;
         int savings = 0;
         int percent = 0;
@@ -87,14 +87,14 @@ public class Main {
                     winners = new ArrayList<>();
                 }
                 if(savings == PRIZEBALANCE && count == longestTime) {
-                    Winners w = new Winners(i,j);
+                    Winner w = new Winner(i,j);
                     winners.add(w);
                 }
             }
         }
 
         System.out.print("Winning deposits: [");
-        for (Winners winner: winners) {
+        for (Winner winner: winners) {
             System.out.print(winner.toString() + ", ");
         }
         System.out.print("]\n");

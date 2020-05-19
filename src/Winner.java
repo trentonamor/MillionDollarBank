@@ -1,7 +1,7 @@
-public class Winners {
+public class Winner {
     int firstAmt;
     int secondAmt;
-    public Winners(int first, int second) {
+    public Winner(int first, int second) {
         firstAmt = first;
         secondAmt = second;
     }
